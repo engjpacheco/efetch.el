@@ -25,13 +25,13 @@ M-x efetch
 ** Information Displayed
 The displayed information includes:
 
-Header :: A bold and highlighted title for the efetch display.
-Emacs Version :: The version of Emacs currently running.
-Host :: Information about the host machine, obtained using the uname -o command.
-User :: The username of the person currently logged in.
-Packages Installed :: The number of packages activated in your Emacs setup.
-Active Theme :: The name of the currently active Emacs theme, or "None" if no theme is active.
-Default Font :: The default font family used in your Emacs setup.
+- Header :: A bold and highlighted title for the efetch display.
+- Emacs Version :: The version of Emacs currently running.
+- Host :: Information about the host machine, obtained using the uname -o command.
+- User :: The username of the person currently logged in.
+- Packages Installed :: The number of packages activated in your Emacs setup.
+- Active Theme :: The name of the currently active Emacs theme, or "None" if no theme is active.
+- Default Font :: The default font family used in your Emacs setup.
 
 ** Customization
 Feel free to customize the appearance or the information displayed in the efetch buffer by modifying the relevant sections in the efetch function.
