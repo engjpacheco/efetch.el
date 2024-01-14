@@ -5,8 +5,6 @@
 #+OPTIONS: toc:2
 
 
-* efetch.el
-
 A fetching tool written in emacs-lisp
 
 #+begin_center
@@ -14,22 +12,45 @@ A fetching tool written in emacs-lisp
 [[./img/1.png]]
 #+end_center
 
-** Overview:
+** Overview
+efetch is an Emacs extension designed to display custom information in a left buffer. This tool provides a quick overview of essential details about your =Emacs= environment, including Emacs version, host information, user details, installed packages, active theme, and default font.
 
-This fetching tools open a buffer in the left side of the main frame
-and provide some information about =emacs= such packages, font, version,etc.
+** Usage
+To use =efetch=, simply invoke the command interactively. You can do this by executing the following command in Emacs:
 
-Emacs version:
-Host:
-User:
-Packages:
-Active theme:
-Default font:
+#+begin_example
+M-x efetch
+#+end_example
 
-** Installation & configuration.
-*** General
-[[https://melpa.org/#/getting-started][Configure emacs to use melpa]], then require =efetch= in your emacs config:
-#+BEGIN_SRC elisp
+** Information Displayed
+The displayed information includes:
+
+Header :: A bold and highlighted title for the efetch display.
+Emacs Version :: The version of Emacs currently running.
+Host :: Information about the host machine, obtained using the uname -o command.
+User :: The username of the person currently logged in.
+Packages Installed :: The number of packages activated in your Emacs setup.
+Active Theme :: The name of the currently active Emacs theme, or "None" if no theme is active.
+Default Font :: The default font family used in your Emacs setup.
+
+** Customization
+Feel free to customize the appearance or the information displayed in the efetch buffer by modifying the relevant sections in the efetch function.
+
+** Keyboard Shortcut
+A keyboard shortcut is set to close the efetch buffer and its window:
+
+Press =q= to quickly close the *efetch-popup* buffer and its window.
+*** Note
+Adjust the (sit-for 7) line as needed. This line determines the =duration= the /efetch/ buffer remains visible before automatically closing. Modify the number to your preference.
+
+** Installation
+To use =efetch=, you can add the following line to your =Emacs= configuration:
+
+#+BEGIN_SRC emacs-lisp
 (require 'efetch)
-(global-set-key (kbd "<f5>") 'efetch)
 #+END_SRC
+Ensure the =efetch.el= file is in a directory included in your load-path.
+
+
+License
+This software is distributed under the GNU General Public License. See the accompanying LICENSE file for more details.
