@@ -1,0 +1,34 @@
+#+TITLE: efetch.el
+#+AUTHOR: Javier Pacheco
+#+DESCRIPTION: A fetching tool written in emacs-lisp
+#+STARTUP: showeverything
+#+OPTIONS: toc:2
+
+
+* Overview.
+A fetching tool written in =emacs-lisp=.
+
+#+begin_center
+#+CAPTION: Preview of efetch
+[[./img/1.png]]
+#+end_center
+
+** efetch.el
+
+This fetching tools open a buffer in the left side of the main frame
+and provide some information about emacs such packages, font, version,etc.
+
+Emacs version:
+Host:
+User:
+Packages:
+Active theme:
+Default font:
+
+*** Installation & configuration.
+**** General
+[[https://melpa.org/#/getting-started][Configure emacs to use melpa]], then require ~deno-fmt~ in your emacs config:
+#+BEGIN_SRC elisp
+(require 'efetch)
+(global-set-key (kbd "<f5>") 'efetch)
+#+END_SRC
